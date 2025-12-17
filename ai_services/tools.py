@@ -15,7 +15,7 @@ def note_as_text(db:Session)->str:
 
     return  '\n\n'.join(
 
-         f"Title: {n.title or 'Untitled'}\nContent: {n.content}"
+         f"Title: {n.title or 'Untitled'} Content: {n.content}"
          for n in note
     )
 
