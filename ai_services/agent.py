@@ -21,4 +21,7 @@ QUESTION:
 {question}
 """
     response = agent.run(prompt)
-    return response
+    
+    return response.content
+
+    
