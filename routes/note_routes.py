@@ -21,7 +21,7 @@ def add_note(
    return create_note( db, payload.content,payload.title)
 
 # List all note
-@router.get("/", response_model= list[NoteResponse])
+@router.get("/all", response_model= list[NoteResponse])
 def list_note(db:Session = Depends(get_db)):
    return get_all_notes(db)
 
@@ -38,8 +38,8 @@ def get_single_note(
     return note
 
 
-
-
+#ask ai for notes
+ 
 @router.post("/ask")
 def ask_ai(
       question : str,

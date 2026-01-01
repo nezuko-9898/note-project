@@ -6,7 +6,7 @@ from app.models.note import Note
 def create_note(
     db: Session,
     content: str,
-    title: str | None = None
+    title: str 
 ):
     note = Note(
         title=title,
